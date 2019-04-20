@@ -16,6 +16,8 @@ gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem "jwt", "~> 2.1"
+
 gem 'active_model_serializers'
 
 # Use ActiveStorage variant

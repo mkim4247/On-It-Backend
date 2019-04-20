@@ -10,43 +10,88 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_19_151516) do
+ActiveRecord::Schema.define(version: 2019_04_19_203506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
+  create_table "team_boards", force: :cascade do |t|
     t.string "name"
+    t.string "description"
+    t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "site_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "sites", force: :cascade do |t|
+  create_table "team_projects", force: :cascade do |t|
     t.string "name"
-    t.string "url"
-    t.integer "category_id"
+    t.string "description"
+    t.integer "team_board_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_categories", force: :cascade do |t|
+  create_table "team_todos", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.date "due_date"
+    t.integer "team_project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_boards", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
     t.integer "user_id"
-    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_projects", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "user_board_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_team_todos", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "team_todo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_teams", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_todos", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.date "due_date"
+    t.integer "user_project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
     t.string "username"
     t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
