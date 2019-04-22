@@ -8,10 +8,6 @@
 
 mike = User.create(first_name: "Mike", last_name: "Kim", username: "mk", password: "123", email: "mike@gmail.com")
 
-team = Team.create(name: "Podcast", description: "podcast project")
-
-userteam = UserTeam.create(user: mike, team: team)
-
 board1 = UserBoard.create(name: "On It", description: "task org project", user: mike)
 
 proj1 = UserProject.create(name: "backend", description: "flesh out rails", user_board: board1)
@@ -22,6 +18,9 @@ todo1 = UserTodo.create(title: "routes", description: "finish routes", user_proj
 
 todo2 = UserTodo.create(title: "fetches", description: "get fetches done", user_project: proj2)
 
+team = Team.create(name: "Podcast", description: "podcast project")
+
+userteam = UserTeam.create(user: mike, team: team)
 
 teamboard1 = TeamBoard.create(name: "Podcast Peeps", description: "podcast peeps project", team: team)
 
