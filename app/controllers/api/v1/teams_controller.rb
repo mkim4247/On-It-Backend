@@ -9,7 +9,7 @@ class Api::V1::TeamsController < ApplicationController
   def create
     @team = Team.create(team_params)
     if @team.valid?
-      UserTeam.create(team_id: @team.id, user_id: params[:id])
+      UserTeam.create(team_id: @team.id, user_id: params[:user_id])
       render json: {
         team: TeamSerializer.new(@team),
         message: "created",
@@ -17,7 +17,7 @@ class Api::V1::TeamsController < ApplicationController
         error: false,
       }, status: :created
     else
-      render json { error: 'failed to create team' }, status: :not_acceptable
+      render json: { error: 'failed to create team' }, status: :not_acceptable
     end
   end
 
