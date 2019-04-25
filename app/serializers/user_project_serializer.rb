@@ -1,5 +1,5 @@
 class UserProjectSerializer < ActiveModel::Serializer
-  attributes :name, :description, :todos
+  attributes :id, :name, :description, :todos, :user_board_id, :updated_at
 
   def todos
     object.user_todos.map do |user_todo|

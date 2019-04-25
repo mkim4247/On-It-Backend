@@ -1,5 +1,5 @@
 class TeamBoardSerializer < ActiveModel::Serializer
-  attributes :name, :description, :projects
+  attributes :id, :name, :description, :projects, :updated_at
 
   def projects
     object.team_projects.map do |team_project|

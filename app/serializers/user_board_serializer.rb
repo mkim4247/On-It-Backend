@@ -1,5 +1,5 @@
 class UserBoardSerializer < ActiveModel::Serializer
-  attributes :name, :description, :projects
+  attributes :id, :name, :description, :projects
 
   def projects
     object.user_projects.map do |user_project|

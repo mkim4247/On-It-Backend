@@ -1,3 +1,3 @@
 class TeamTodoSerializer < ActiveModel::Serializer
-  attributes :title, :description, :due_date
+  attributes :id, :title, :description, :due_date
 end

@@ -3,7 +3,8 @@ class CreateUserBoards < ActiveRecord::Migration[5.2]
     create_table :user_boards do |t|
       t.string :name
       t.string :description
-      t.integer :user_id 
+      t.string :background_color
+      t.integer :user_id
       t.timestamps
     end
   end
