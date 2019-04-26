@@ -5,7 +5,7 @@ class Api::V1::InviteController < ApplicationController
     @invite = Invite.create(invite_params)
     if @invite.valid?
       render json: {
-        invite: @invite,
+        invite: InviteSerializer.new(@invite),
         message: "created",
         error: false
       }, status: :created

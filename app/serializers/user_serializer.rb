@@ -13,4 +13,16 @@ class UserSerializer < ActiveModel::Serializer
     end
   end
 
+  def invitations
+    object.invitations.map do |invitation|
+      InviteSerializer.new(invitation)
+    end
+  end
+
+  def sent_invites
+    object.sent_invites.map do |sent_invite|
+      InviteSerializer.new(sent_invite)
+    end
+  end 
+
 end
