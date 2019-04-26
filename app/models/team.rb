@@ -7,4 +7,6 @@ class Team < ApplicationRecord
   has_many :team_boards, dependent: :destroy
   has_many :team_projects, through: :team_boards
 
+  has_many :invite
+  
 end

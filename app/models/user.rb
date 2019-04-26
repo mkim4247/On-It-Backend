@@ -17,4 +17,6 @@ class User < ApplicationRecord
   has_many :user_projects, through: :user_boards
   has_many :user_todos, through: :user_projects
 
+  has_many :invitations, :class_name => "Invite", :foreign_key => 'receiver_id'
+  has_many :sent_invites, :class_name => "Invite", :foreign_key => 'sender_id'
 end
