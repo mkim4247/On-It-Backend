@@ -3,6 +3,6 @@ class UserBoard < ApplicationRecord
 
   belongs_to :user
   has_many :user_projects, dependent: :destroy
-  has_many :user_todos, through: :user_projects
+  has_many :user_todos, through: :user_projects, dependent: :destroy
 
 end

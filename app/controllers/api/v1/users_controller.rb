@@ -12,7 +12,6 @@ class Api::V1::UsersController < ApplicationController
       render json: {
         user: UserSerializer.new(@user),
         message: "created",
-        user_info: @user,
         error: false,
         token: encode({user_id: @user.id})
         }, status: :created

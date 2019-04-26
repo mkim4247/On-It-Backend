@@ -13,7 +13,6 @@ class Api::V1::TeamsController < ApplicationController
       render json: {
         team: TeamSerializer.new(@team),
         message: "created",
-        team_info: @team,
         error: false,
       }, status: :created
     else
@@ -46,7 +45,7 @@ class Api::V1::TeamsController < ApplicationController
   end
 
   def team_params
-    params.require(:team).permit(:name, :description)
+    params.require(:team).permit(:name, :description, :user_id)
   end
 
 end

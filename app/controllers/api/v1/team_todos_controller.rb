@@ -31,6 +31,6 @@ class Api::V1::TeamTodosController < ApplicationController
   end
 
   def team_todo_params
-    params.require(:team_todo).permit(:name, :description, :team_project_id)
+    params.require(:team_todo).permit(:title, :description, :due_date, :team_project_id)
   end
 end
