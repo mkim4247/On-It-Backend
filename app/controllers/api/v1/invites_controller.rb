@@ -1,8 +1,13 @@
-class Api::V1::InviteController < ApplicationController
+class Api::V1::InvitesController < ApplicationController
   before_action :find_invite, only: [:destroy]
 
+  def index
+    @invites = Invite.all
+    render @invites
+  end
+
   def create
-    @invite = Invite.create(invite_params)
+    @invite = Invite.find_or_create_by(invite_params)
     if @invite.valid?
       render json: {
         invite: InviteSerializer.new(@invite),
@@ -12,6 +17,11 @@ class Api::V1::InviteController < ApplicationController
     else
       render json: { error: "failed to create invite" }, status: :not_acceptable
     end
+  end
+
+  def destroy
+    @invite.destroy
+    render json: Invite.all
   end
 
   private

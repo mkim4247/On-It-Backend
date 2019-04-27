@@ -9,7 +9,8 @@ Rails.application.routes.draw do
       resources :team_boards, only: [:create, :update, :destroy]
       resources :team_projects, only: [:create, :update, :destroy]
       resources :team_todos, only: [:create, :update, :destroy]
-      resources :invites, only: [:create, :destroy]
+      resources :invites, only: [:index, :create, :destroy]
+      resources :user_teams, only: [:index, :create, :destroy]
       post '/login', to: "auth#create"
       post '/new', to: "users#create"
       get '/profile', to: "users#profile"
