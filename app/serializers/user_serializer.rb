@@ -1,7 +1,7 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :username, :email, :user_boards, :teams, :invitations, :sent_invites
+  attributes :id, :first_name, :last_name, :username, :email, :boards, :teams, :invitations, :sent_invites
 
-  def user_boards
+  def boards
     object.user_boards.map do |user_board|
       UserBoardSerializer.new(user_board)
     end
@@ -23,6 +23,6 @@ class UserSerializer < ActiveModel::Serializer
     object.sent_invites.map do |sent_invite|
       InviteSerializer.new(sent_invite)
     end
-  end 
+  end
 
 end

@@ -3,5 +3,5 @@ class TeamProject < ApplicationRecord
 
   belongs_to :team_board
   has_many :team_todos, dependent: :destroy
-  has_many :team_comments 
+  has_many :team_comments, dependent: :destroy
 end

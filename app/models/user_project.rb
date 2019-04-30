@@ -3,6 +3,6 @@ class UserProject < ApplicationRecord
 
   belongs_to :user_board
   has_many :user_todos, dependent: :destroy
-  has_many :user_comments
-  
+  has_many :user_comments, dependent: :destroy
+
 end

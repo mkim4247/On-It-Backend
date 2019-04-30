@@ -8,6 +8,8 @@
 
 mike = User.create(first_name: "Mike", last_name: "Kim", username: "mk", password: "123", email: "mike@gmail.com")
 
+joe = User.create(first_name: "Joe", last_name: "Shmo", username: "js", password: "123", email: "joe@gmail.com")
+
 board1 = UserBoard.create(name: "On It", description: "task org project", user: mike)
 
 proj1 = UserProject.create(name: "backend", description: "flesh out rails", user_board: board1)

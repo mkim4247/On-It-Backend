@@ -22,6 +22,6 @@ class Api::V1::TeamCommentsController < ApplicationController
   end
 
   def team_comment_params
-    params.require(:team_comment).permit(:content, :team_id, :team_project_id)
+    params.require(:team_comment).permit(:content, :user_id, :team_project_id)
   end
 end
