@@ -1,5 +1,4 @@
 class Api::V1::UserTeamsController < ApplicationController
-  before_action :find_user_team, only: [:destroy]
 
   def index
     @user_teams = UserTeam.all
@@ -14,7 +13,7 @@ class Api::V1::UserTeamsController < ApplicationController
       render json: {
         user_team: @user_team,
         user: UserSerializer.new(@user),
-        team: @team
+        team: TeamSerializer.new(@team)
         }, status: :accepted
     else
       render json: { errors: @user_team.errors.full_messages}
@@ -22,15 +21,15 @@ class Api::V1::UserTeamsController < ApplicationController
   end
 
   def destroy
+    @user_team = UserTeam.find_by(user_id: params[:user_id], team_id: params[:team_id])
     @user_team.destroy
-    render json: UserTeam.all
+
+    @user = User.find(params[:user_id])
+    render json: @user
+
   end
 
   private
-
-  def find_user_team
-    @user_team = UserTeam.find(params[:id])
-  end
 
   def user_team_params
     params.require(:user_team).permit(:user_id, :team_id)

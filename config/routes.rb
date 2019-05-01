@@ -10,13 +10,15 @@ Rails.application.routes.draw do
       resources :team_projects, only: [:create, :update, :destroy]
       resources :team_todos, only: [:create, :update, :destroy]
       resources :invites, only: [:index, :create, :destroy]
-      resources :user_teams, only: [:index, :create, :destroy]
+      resources :user_teams, only: [:index, :create]
       resources :user_comments, only: [:create, :destroy]
       resources :team_comments, only: [:create, :destroy]
-      resources :user_team_todos, only: [:create, :destroy]
+      resources :user_team_todos, only: [:create]
       post '/login', to: "auth#create"
       post '/new', to: "users#create"
       get '/profile', to: "users#profile"
+      delete '/user_teams', to: "user_teams#destroy"
+      delete '/user_team_todos', to: "user_team_todos#destroy"
     end
   end
 end

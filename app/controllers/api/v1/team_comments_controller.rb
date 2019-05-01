@@ -4,7 +4,7 @@ class Api::V1::TeamCommentsController < ApplicationController
   def create
     @team_comment = TeamComment.create(team_comment_params)
     if @team_comment.valid?
-      render json: { team_comment: TeamCommentSerializer.new(@team_comment)}, status: :accepted
+      render json: @team_comment, status: :accepted
     else
       render json: { errors: @team_comment.errors.full_messages }
     end

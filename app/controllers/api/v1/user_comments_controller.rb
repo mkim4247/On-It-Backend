@@ -4,15 +4,18 @@ class Api::V1::UserCommentsController < ApplicationController
   def create
     @user_comment = UserComment.create(user_comment_params)
     if @user_comment.valid?
-      render json: { user_comment: UserCommentSerializer.new(@user_comment)}, status: :accepted
+      render json: @user_comment, status: :accepted
     else
       render json: { errors: @user_comment.errors.full_messages }
     end
-  end 
+  end
 
   def destroy
     @user_comment.destroy
-    render json: UserComment.all
+    @comments = UserComment.all.select do |user_comment|
+      user_comment.user_project_id == params[:user_project_id]
+    end
+    render json: @comments
   end
 
   private
