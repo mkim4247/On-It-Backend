@@ -31,7 +31,7 @@ class Api::V1::TeamBoardsController < ApplicationController
   end
 
   def team_board_params
-    params.require(:team_board).permit(:name, :description, :team_id)
+    params.require(:team_board).permit(:name, :description, :background_image, :team_id)
   end
 
 end

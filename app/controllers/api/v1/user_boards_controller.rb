@@ -31,7 +31,7 @@ class Api::V1::UserBoardsController < ApplicationController
   end
 
   def user_board_params
-    params.require(:user_board).permit(:name, :description, :user_id)
+    params.require(:user_board).permit(:name, :description, :background_image, :user_id)
   end
 
 end
