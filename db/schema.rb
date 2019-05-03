@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_04_29_210521) do
   create_table "team_boards", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "background_color"
+    t.string "background_image"
     t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 2019_04_29_210521) do
   create_table "user_boards", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "background_color"
+    t.string "background_image"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -8,7 +8,9 @@ class TeamProjectSerializer < ActiveModel::Serializer
   end
 
   def comments
-    object.team_comments
-  end 
+    object.team_comments.map do |team_comment|
+      TeamCommentSerializer.new(team_comment)
+    end 
+  end
 
 end

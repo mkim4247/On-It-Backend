@@ -10,7 +10,7 @@ mike = User.create(first_name: "Mike", last_name: "Kim", username: "mk", passwor
 
 joe = User.create(first_name: "Joe", last_name: "Shmo", username: "js", password: "123", email: "joe@gmail.com")
 
-board1 = UserBoard.create(name: "On It", description: "task org project", user: mike)
+board1 = UserBoard.create(name: "On It", description: "task org project", user: mike, background_image: 'https://images.unsplash.com/photo-1454357402858-6f7bafb65814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
 
 proj1 = UserProject.create(name: "backend", description: "flesh out rails", user_board: board1)
 
