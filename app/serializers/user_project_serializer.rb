@@ -8,7 +8,9 @@ class UserProjectSerializer < ActiveModel::Serializer
   end
 
   def comments
-    object.user_comments
+    object.user_comments.map do |comment|
+      UserCommentSerializer.new(comment)
+    end 
   end
 
 end
