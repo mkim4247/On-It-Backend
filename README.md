@@ -1,45 +1,12 @@
+# README
+On It was created as a simple project and task management app. Users can create their own private boards to organize personal projects and/or join teams to work on group projects together. Users can create, edit, or delete Boards, which consist of Projects, which further consist of Tasks. They may also leave comments on Projects to ask questions, have discussions, or leave reminders/notes.
 
+The backend was developed on Ruby 2.5.1 and Rails 5.2.1, and uses Active Model Serializers and a PostgreSQL Database. For basic auth, BCrypt and JWT were used as well.
 
-Photo by 贝莉儿 NG on Unsplash
+Credits to the following artists on Unsplash for the background images that were used: Paul Earle, 贝莉儿 NG, Nitish Meena, Josefa Holland-Merten, Robert Bye, Jay Mantri, Blair Fraser, Jeremy Ricketts, Dominik Schröder, Anthony DELANOIX, Modestas Urbonas, Namphuong Van, Blake Richard Verdoorn, Nick Scheerbart, Ivan Slade, Clem Onojeghuo, Noah Baslé, Cameron Kirby, Sebastien Gabriel, Elliott Engelmann, Paul Jarvis, Jonathan Bean, and NASA
 
-Photo by Nitish Meena on Unsplash
+The frontend repo can be found here:
+https://github.com/mkim4247/On-It-Frontend
 
-Photo by Josefa Holland-Merten on Unsplash
-
-Photo by Robert Bye on Unsplash
-
-Photo by Jay Mantri on Unsplash
-
-Photo by Blair Fraser on Unsplash
-
-Photo by Jeremy Ricketts on Unsplash
-
-Photo by Dominik Schröder on Unsplash
-
-Photo by Anthony DELANOIX on Unsplash
-
-Photo by Modestas Urbonas on Unsplash
-
-Photo by Namphuong Van on Unsplash
-
-Photo by Blake Richard Verdoorn on Unsplash
-
-Photo by Nick Scheerbart on Unsplash
-
-Photo by Ivan Slade on Unsplash
-
-Photo by Clem Onojeghuo on Unsplash
-
-Photo by Noah Baslé on Unsplash
-
-Photo by Cameron Kirby on Unsplash
-
-Photo by Sebastien Gabriel on Unsplash
-
-Photo by Elliott Engelmann on Unsplash
-
-Photo by Paul Jarvis on Unsplash
-
-Photo by Jonathan Bean on Unsplash
-
-Photo by NASA on Unsplash
+Below is a demo of the app:
+https://www.youtube.com/watch?v=1ENl7yk6aeY
