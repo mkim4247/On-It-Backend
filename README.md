@@ -1,5 +1,5 @@
 # README
-On It was created as a simple project and task management app. Users can create their own private boards to organize personal projects and/or join teams to work on group projects together. Users can create, edit, or delete Boards, which consist of Projects, which further consist of Tasks. They may also leave comments on Projects to ask questions, have discussions, or leave reminders/notes.
+On It was created as a simple project and task management app. Users can create their own private boards to organize personal projects and/or join teams to work on group projects together. Users can create, edit, or delete Boards, which consist of Projects, which further consist of Tasks. They can change the order that Tasks are listed in a Project and/or move the Task to a different Project. They may also leave comments on Projects to ask questions, have discussions, or leave reminders/notes. User can only join a team if they are invited by someone on that team; once a member, they have the option of leaving the team if they want.
 
 The backend was developed on Ruby 2.5.1 and Rails 5.2.1, and uses Active Model Serializers and a PostgreSQL Database. For basic auth, BCrypt and JWT were used as well.
 
