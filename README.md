@@ -3,7 +3,7 @@ On It was created as a simple project and task management app. Users can create 
 
 The backend was developed on Ruby 2.5.1 and Rails 5.2.1, and uses Active Model Serializers and a PostgreSQL Database. For basic auth, BCrypt and JWT were used as well.
 
-Credits to the following artists on Unsplash for the background images that were used: Paul Earle, 贝莉儿 NG, Nitish Meena, Josefa Holland-Merten, Robert Bye, Jay Mantri, Blair Fraser, Jeremy Ricketts, Dominik Schröder, Anthony DELANOIX, Modestas Urbonas, Namphuong Van, Blake Richard Verdoorn, Nick Scheerbart, Ivan Slade, Clem Onojeghuo, Noah Baslé, Cameron Kirby, Sebastien Gabriel, Elliott Engelmann, Paul Jarvis, Jonathan Bean, and NASA
+Credits to the following artists on Unsplash for the background images that were used: Paul Earle, 贝莉儿 NG, Nitish Meena, Josefa Holland-Merten, Robert Bye, Jay Mantri, Blair Fraser, Jeremy Ricketts, Dominik Schröder, Anthony DELANOIX, Modestas Urbonas, Namphuong Van, Blake Richard Verdoorn, Nick Scheerbart, Ivan Slade, Clem Onojeghuo, Noah Baslé, Cameron Kirby, Sebastien Gabriel, Elliott Engelmann, Paul Jarvis, Jonathan Bean, and NASA. Hand Icon made by Freepik on www.flaticon.com
 
 The frontend repo can be found here:
 https://github.com/mkim4247/On-It-Frontend
