@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_04_29_210521) do
   end
 
   create_table "team_todos", force: :cascade do |t|
+    t.integer "display_order"
     t.string "title"
     t.string "description"
     t.date "due_date"
@@ -105,6 +106,7 @@ ActiveRecord::Schema.define(version: 2019_04_29_210521) do
   end
 
   create_table "user_todos", force: :cascade do |t|
+    t.integer "display_order"
     t.string "title"
     t.string "description"
     t.date "due_date"

@@ -3,8 +3,13 @@ class Api::V1::TeamTodosController < ApplicationController
 
   def create
     @team_todo = TeamTodo.create(team_todo_params)
-    if @team_todo.valid?
-      render json: { team_todo: TeamTodoSerializer.new(@team_todo)}, status: :accepted
+
+    # needed for drag and drop reordering
+    team_project = TeamProject.find(params[:team_project_id])
+    @team_todo.display_order = team_project.team_todos.length
+
+    if @team_todo.save
+      render json: { team_todo: TeamTodoSerializer.new(@team_todo) }, status: :accepted
     else
       render json: { errors: @team_todo.errors.full_messages }
     end
@@ -31,6 +36,6 @@ class Api::V1::TeamTodosController < ApplicationController
   end
 
   def team_todo_params
-    params.require(:team_todo).permit(:title, :description, :due_date, :team_project_id)
+    params.require(:team_todo).permit(:display_order, :title, :description, :due_date, :team_project_id)
   end
 end

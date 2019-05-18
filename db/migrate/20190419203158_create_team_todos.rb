@@ -1,6 +1,7 @@
 class CreateTeamTodos < ActiveRecord::Migration[5.2]
   def change
     create_table :team_todos do |t|
+      t.integer :display_order
       t.string :title
       t.string :description
       t.date :due_date
