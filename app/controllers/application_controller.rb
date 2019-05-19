@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
 
     def secret_key
-      'k1mb0'
+      Rails.application.credentials.secret_key_base
     end
 
     def encode(payload)
