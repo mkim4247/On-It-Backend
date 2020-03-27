@@ -10,3 +10,6 @@ https://github.com/mkim4247/On-It-Frontend
 
 Below is a demo of the app:
 https://www.youtube.com/watch?v=1ENl7yk6aeY
+
+A live version of the app can be found here:
+https://on-it-app.herokuapp.com/login
